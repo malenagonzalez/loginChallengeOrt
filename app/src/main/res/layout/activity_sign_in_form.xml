@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignInForm"
+    android:background="@drawable/background_gradient">
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.08" />
+
+    <View
+        android:id="@+id/containerViewId"
+        style="@style/ContainerComponent"
+        android:layout_width="336dp"
+        android:layout_height="427dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="5dp"
+        android:foregroundGravity="fill"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/signInTextId"
+        style="@style/TextAppearanceLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/sign_in"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/containerViewId" />
+
+
+    <EditText
+        android:id="@+id/emailInputId"
+        style="@style/InputContainer"
+        android:layout_width="271dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/input_text"
+        android:drawableRight="@drawable/mail_vector"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="@+id/containerViewId"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="@+id/containerViewId"
+        app:layout_constraintTop_toBottomOf="@+id/signInTextId" />
+
+    <EditText
+        android:id="@+id/userInputId"
+        style="@style/InputContainer"
+        android:layout_width="271dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="68dp"
+        android:background="@drawable/input_text"
+        android:drawableRight="@drawable/user_vector"
+        android:hint="@string/userName"
+        app:layout_constraintEnd_toEndOf="@+id/containerViewId"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="@+id/containerViewId"
+        app:layout_constraintTop_toTopOf="@+id/emailInputId" />
+
+    <EditText
+        android:id="@+id/passwordInputId"
+        style="@style/InputContainer"
+        android:layout_width="271dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="64dp"
+        android:background="@drawable/input_text"
+        android:drawableRight="@drawable/pass_eye_vector"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/containerViewId"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="@+id/containerViewId"
+        app:layout_constraintTop_toTopOf="@id/userInputId" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/signInButtonId"
+        style="@style/LoginButton"
+        android:layout_width="273dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="@string/sign_in_button"
+        app:layout_constraintEnd_toEndOf="@+id/containerViewId"
+        app:layout_constraintHorizontal_bias="0.716"
+        app:layout_constraintStart_toStartOf="@+id/containerViewId"
+        app:layout_constraintTop_toBottomOf="@id/passwordInputId" />
+
+    <TextView
+            android:id="@+id/lostAccountTextId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/login_option"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/light_blue"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/signInButtonId" />
+
+
+    <TextView
+        android:id="@+id/goBackTextId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/go_back"
+        android:textColor="@color/light_blue"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/containerViewId" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
